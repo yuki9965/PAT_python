@@ -21,4 +21,5 @@ while True:
         for c in rats:
             print c.color
     except:
+
         break

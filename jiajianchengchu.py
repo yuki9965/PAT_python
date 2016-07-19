@@ -1,19 +1,18 @@
-__author__ = 'Yaicky'
+import math
+def count( A, n):
+    # write code here
+    left = 0
+    right = n-1
+    count = 0
+    while(left!=right and abs(left-right) != 1):
+        if A[left]>A[left+1]:
+            count += 1
+        if A[right]<A[right-1]:
+            count += 1
 
-def add(num1_1, num1_2, num2_1, num2_2):
-    down = num1_2 * num2_2
+        left += 1
+        right -= 1
 
+    return count
 
-
-
-
-
-while True:
-    try:
-        n = map(int, raw_input().strip().split(' ', '/'))
-        num1_1 = n[0]
-        num1_2 = n[1]
-        num2_1 = n[2]
-        num2_2 = n[3]
-    except:
-        break
+print count([1,2,3,4,5,6,7,0],8)
